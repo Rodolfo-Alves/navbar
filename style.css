@@ -3,40 +3,80 @@
   padding: 0;
 }
 
+
 a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
+/* Alterar opacidade e adicionar o texto em caixa alta */
 a:hover {
-  opacity: 0.7;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+button:hover{
+  list-style: none;
+      display: flex;
+      background-color: transparent;
+border: none;
+outline-style: none;
+}
+
+.titulo {
+  font-size: 26px;
+  text-transform: uppercase;
+  text-align: justify;
+  position: fixed;
+    top: 15vh;
+    right: -75vh;
+    width: 90vw;
+    height: 92vh;
+}
+
+
+.ramais {
+  position: fixed;
+    top: 22vh;
+    right: -60vh;
+    width: 90vw;
+    height: 92vh;
+  font-size: 18px;
+  text-align: justify;
+  letter-spacing: 2px;
 }
 
 .logo {
-  font-size: 24px;
+  position: relative;
+    top: 0.5vh;
+    right: -20vh;
+    /* width: 90vw; */
+    /* height: 92vh; */
+  font-size: 26px;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  text-align: center;
+  letter-spacing: 7px;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif,;
+  background: #118002;
   height: 8vh;
 }
 
 main {
-  background: url("bg.jpg") no-repeat center center;
+  /* background: url("bg.jpg") no-repeat center center; */
   background-size: cover;
   height: 92vh;
 }
 
 .nav-list {
   list-style: none;
-  display: flex;
+  display: flex !important;
 }
 
 .nav-list li {
@@ -45,8 +85,9 @@ main {
 }
 
 .mobile-menu {
-  display: none;
-  cursor: pointer;
+  float: left;
+  /* display: block;
+  cursor: pointer; */
 }
 
 .mobile-menu div {
@@ -57,22 +98,36 @@ main {
   transition: 0.3s;
 }
 
-@media (max-width: 999px) {
+/* Ajustando a barra lateral direita */
+@media (max-width: 1920px) { 
   body {
     overflow-x: hidden;
   }
   .nav-list {
-    position: absolute;
+    /* position: fixed;
     top: 8vh;
     right: 0;
-    width: 50vw;
+    width: 27vw;
     height: 92vh;
-    background: #23232e;
+    overflow-y: scroll;
+    background: #118002;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     transform: translateX(100%);
-    transition: transform 0.3s ease-in;
+    transition: transform 0.5s ease-out;    */
+    position: fixed;
+  top: 8vh; 
+  left: 0;
+  height: 92vh;
+  width: 27vw;
+  overflow-y: scroll;
+  flex-direction: column;
+  background-color: #118002;
+  z-index: 2;
+  justify-content: space-between;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-out;
   }
   .nav-list li {
     margin-left: 0;
@@ -98,6 +153,7 @@ main {
   }
 }
 
+/* Animação do Menu virando um X */
 .mobile-menu.active .line1 {
   transform: rotate(-45deg) translate(-8px, 8px);
 }
@@ -109,3 +165,4 @@ main {
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
+

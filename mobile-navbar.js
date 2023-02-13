@@ -30,7 +30,7 @@ class MobileNavbar {
 
   init() {
     if (this.mobileMenu) {
-      this.addClickEvent();
+      this.addClickEvent();      
     }
     return this;
   }
