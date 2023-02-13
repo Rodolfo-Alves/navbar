@@ -27,10 +27,11 @@ outline-style: none;
 .titulo {
   font-size: 26px;
   text-transform: uppercase;
-  text-align: justify;
+  text-align: center;
   position: fixed;
     top: 15vh;
-    right: -75vh;
+    right: -40vh;
+    left: 5vh;
     width: 90vw;
     height: 92vh;
 }
@@ -39,7 +40,7 @@ outline-style: none;
 .ramais {
   position: fixed;
     top: 22vh;
-    right: -60vh;
+    left: 70vh;
     width: 90vw;
     height: 92vh;
   font-size: 18px;
@@ -48,9 +49,11 @@ outline-style: none;
 }
 
 .logo {
+  display: block;
   position: relative;
-    top: 0.5vh;
+    top: -5vh;
     right: -20vh;
+   /* right: -10vh;*/
     /* width: 90vw; */
     /* height: 92vh; */
   font-size: 26px;
@@ -64,19 +67,20 @@ nav {
   justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif,;
-  background: #118002;
+  background: #00675D;
   height: 8vh;
 }
 
 main {
-  /* background: url("bg.jpg") no-repeat center center; */
-  background-size: cover;
+  background: url("fob-logo.png") no-repeat bottom right;
+  background-position: 98% 95%;
+  background-size: 350px 350px;
   height: 92vh;
 }
 
 .nav-list {
   list-style: none;
-  display: flex !important;
+  display: flex;
 }
 
 .nav-list li {
@@ -85,17 +89,31 @@ main {
 }
 
 .mobile-menu {
-  float: left;
-  /* display: block;
-  cursor: pointer; */
+  position: relative;
+  top: 2vh;
+  left: -15vh;
+ /* float: right;*/
+  display: block;
+ /* align-items: center;
+  justify-content: center;*/
+  cursor: pointer; 
 }
 
 .mobile-menu div {
+  top: -3.5vh;;
+  right: -8vh;
+  left: 0;
   width: 32px;
   height: 2px;
   background: #fff;
   margin: 8px;
   transition: 0.3s;
+  /*left: 0;
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;*/
 }
 
 /* Ajustando a barra lateral direita */
@@ -123,7 +141,7 @@ main {
   width: 27vw;
   overflow-y: scroll;
   flex-direction: column;
-  background-color: #118002;
+  background-color: #00675D;
   z-index: 2;
   justify-content: space-between;
   transform: translateX(-100%);
@@ -134,7 +152,7 @@ main {
     opacity: 0;
   }
   .mobile-menu {
-    display: block;
+    display: block;    
   }
 }
 
