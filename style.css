@@ -23,6 +23,16 @@ button:hover {
   outline-style: none;
 }
 
+.menu-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu{
+ margin: 0;
+ right: 10vh;
+}
+
 .titulo {
   font-size: 26px;
   text-align: center;
@@ -50,23 +60,24 @@ button:hover {
 }
 
 .logo {
-  display: block;
+
   position: relative;
-  top: -5vh;
-  right: -20vh;
+  top: -4vh;
+  right: -35vh;
   font-size: 26px;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 7px;
+  letter-spacing: 3px;
 }
 
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif, ;
+  font-family: 'Courier New', Courier, monospace;
   background: #00675D;
-  height: 8vh;
+  height: 5vh;
+  font-weight: bold;
 }
 
 main {
@@ -82,14 +93,13 @@ main {
 }
 
 .nav-list li {
-  letter-spacing: 3px;
   margin-left: 32px;
 }
 
 .mobile-menu {
   position: relative;
   top: 2vh;
-  left: -15vh;
+  left: -60vh; /* ALTERAR AQUI PARA MUDAR A DISTANCIA DO MENU PRAS 3 BARRAS */
   display: block;
   cursor: pointer;
 }
@@ -105,17 +115,17 @@ main {
   transition: 0.3s;
 }
 
-/* Ajustando a barra lateral direita */
-@media (max-width: 1920px) {
+/* Ajustando a barra lateral esquerda */
+@media screen and (max-width: 1920px) {
   body {
     overflow-x: hidden;
   }
 
   .nav-list {
     position: fixed;
-    top: 8vh;
+    top: 5vh;
     left: 0;
-    height: 92vh;
+    height: 95vh;
     width: 27vw;
     overflow-y: scroll;
     flex-direction: column;
