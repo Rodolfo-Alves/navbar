@@ -1,20 +1,23 @@
+/* Zerando as margens e paddings para todos os elementos */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Alterando a cor, removendo sublinhado e adicionando transição para links */
 a {
   color: #ffffff;
   text-decoration: none;
   transition: 0.2s;
 }
 
-/* Alterar opacidade e adicionar o texto em caixa alta */
+/* Alterar opacidade e adicionar o texto em caixa alta ao passar o mouse em cima dos links */
 a:hover {
   opacity: 0.6;
   text-transform: uppercase;
 }
 
+/* Removendo estilos padrão de botão e adicionando cursor no hover */
 button:hover {
   list-style: none;
   display: flex;
@@ -23,6 +26,7 @@ button:hover {
   outline-style: none;
 }
 
+/* Configurando layout do menu e seu container */
 .menu-container {
   display: inline-block;
   vertical-align: middle;
@@ -36,17 +40,18 @@ button:hover {
 .titulo {
   font-size: 26px;
   text-align: center;
-  position: fixed;
-  top: 15vh;
-  right: -70vh;
-  left: 5vh;
-  width: 90vw;
-  height: 92vh;
-  letter-spacing: 2px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-}
+  position: fixed; /* Define a posição do título como fixa */
+  top: 15vh; /* Define a distância do topo da viewport como 15% da altura da viewport */
+  right: -70vh; /* Define a distância da direita da viewport como -70% da altura da viewport */
+  left: 5vh; /* Define a distância da esquerda da viewport como 5% da altura da viewport */
+  width: 90vw; /* Define a largura do título como 90% da largura da viewport */
+  height: 92vh; /* Define a altura do título como 92% da altura da viewport */
+  letter-spacing: 2px; /* Adiciona espaçamento entre as letras do título */
+  font-family: 'Courier New', Courier, monospace; /* Define a fonte do título */
+  font-weight: bold; /* Define a espessura da fonte do título como negrito */
+  }
 
+/* Configurações dos ramais */
 .ramais {
   position: fixed;
   top: 22vh;
@@ -59,8 +64,8 @@ button:hover {
   font-family: 'Courier New', Courier, monospace;
 }
 
+/* Configurações do logotipo */
 .logo {
-
   position: relative;
   top: -4vh;
   right: -35vh;
@@ -70,6 +75,7 @@ button:hover {
   letter-spacing: 3px;
 }
 
+/* Configurações da barra de navegação */
 nav {
   display: flex;
   justify-content: space-around;
@@ -80,6 +86,7 @@ nav {
   font-weight: bold;
 }
 
+/* Configurações do conteúdo principal */
 main {
   background: url("fob-logo.png") no-repeat bottom right;
   background-position: 98% 95%;
@@ -87,15 +94,18 @@ main {
   height: 92vh;
 }
 
+/* Configurações da lista de navegação */
 .nav-list {
   list-style: none;
   display: flex;
 }
 
+/* Configurações dos itens da lista de navegação */
 .nav-list li {
   margin-left: 32px;
 }
 
+/* Configurações do ícone de menu em dispositivos móveis */
 .mobile-menu {
   position: relative;
   top: 2vh;
@@ -104,6 +114,7 @@ main {
   cursor: pointer;
 }
 
+/* Configurações das barras do ícone de menu em dispositivos móveis */
 .mobile-menu div {
   top: -3.5vh;
   right: -8vh;
@@ -121,56 +132,62 @@ main {
     overflow-x: hidden;
   }
 
-  .nav-list {
-    position: fixed;
-    top: 5vh;
-    left: 0;
-    height: 95vh;
-    width: 27vw;
-    overflow-y: scroll;
-    flex-direction: column;
-    background-color: #00675D;
-    z-index: 2;
-    justify-content: space-between;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-out;
-  }
-
-  .nav-list li {
-    margin-left: 0;
-    opacity: 0;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
+/* Define as propriedades para a lista de navegação */
+.nav-list {
+  position: fixed;         /* Define a posição fixa */
+  top: 5vh;                /* Define a distância do topo */
+  left: 0;                 /* Define a distância da esquerda */
+  height: 95vh;            /* Define a altura */
+  width: 27vw;             /* Define a largura */
+  overflow-y: scroll;      /* Define a barra de rolagem na vertical */
+  flex-direction: column;  /* Define a direção da lista como vertical */
+  background-color: #00675D;  /* Define a cor de fundo */
+  z-index: 2;              /* Define o índice z para empilhamento */
+  justify-content: space-between;  /* Define a distribuição dos itens */
+  transform: translateX(-100%);    /* Define a posição inicial fora da tela */
+  transition: transform 0.5s ease-out;  /* Define a transição de animação */
 }
 
+/* Define as propriedades dos itens da lista */
+.nav-list li {
+  margin-left: 0;   /* Define a margem à esquerda */
+  opacity: 0;       /* Define a opacidade inicial como 0 (invisível) */
+}
+
+/* Define as propriedades do botão de menu para dispositivos móveis */
+.mobile-menu {
+  display: block;   /* Define a exibição do botão como bloco */
+}
+
+/* Define as propriedades para quando a classe "active" é adicionada à lista de navegação */
 .nav-list.active {
-  transform: translateX(0);
+  transform: translateX(0);  /* Define a nova posição para mostrar a lista */
 }
 
+/* Define as propriedades para a animação de transição dos links da lista */
 @keyframes navLinkFade {
   from {
-    opacity: 0;
-    transform: translateX(50px);
+    opacity: 0;              /* Define a opacidade inicial como 0 (invisível) */
+    transform: translateX(50px);   /* Define a posição inicial do link fora da tela */
   }
-
   to {
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 1;              /* Define a opacidade final como 1 (visível) */
+    transform: translateX(0);  /* Define a nova posição para mostrar o link */
   }
 }
 
-/* Animação do Menu virando um X */
+/* Define as propriedades de animação do botão de menu para dispositivos móveis quando a classe "active" é adicionada */
 .mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
+  transform: rotate(-45deg) translate(-8px, 8px);  /* Define a rotação e posição do primeiro traço */
 }
 
+/* Define as propriedades de animação do botão de menu para dispositivos móveis quando a classe "active" é adicionada */
 .mobile-menu.active .line2 {
-  opacity: 0;
+  opacity: 0;   /* Define a opacidade como 0 (invisível) para o segundo traço */
 }
 
+/* Define as propriedades de animação do botão de menu para dispositivos móveis quando a classe "active" é adicionada */
 .mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
+  transform: rotate(45deg) translate(-5px, -7px); /* Define a rotação e posição do terceiro traço */
+}
 }
