@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Especificando o idioma do conteúdo da página  -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ramais - FOB</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="fob-logo.png">
+<head> <!-- Cabeçalho -->
+  <meta charset="UTF-8" /> <!-- Definindo o conjunto de caracteres utilizado no documento -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!--Modo de compatibilidade com versões anteriores do Internet Explorer -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Definindo a forma de exibição em dispositivos móveis -->
+  <title>Ramais - FOB</title> <!-- Titulo da Aba no navegador -->
+  <link rel="stylesheet" href="style.css" /> <!-- Buscando o estilo da página do style.css -->
+  <link rel="icon" href="fob-logo.png"> <!-- Especificando o diretório da imagem -->
   <style>
     .brandInfo {
-      display: none;
+      display: none; /* Display oculto */
     }
 
     .show {
-      display: block;
+      display: block; /* Display em bloco para ocupar toda a tela */
     }
 
     h1 {
-      text-align: center;
+      text-align: center; /* Alinhando o texto no centro */
     }
 
     li {
-      list-style-type: none;
-      margin-bottom: 10px;
+      list-style-type: none; /* Remove o estilo da lista */
+      margin-bottom: 10px; /* Define um espaço de margem inferior em 10px */
     }
   </style>
-</head>
+</head> <!-- Fim do cabeçalho -->
 
-<body>
-  <header>
-    <nav>
-      <a class="menu">MENU</a>
-      <div class="mobile-menu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>        
-        <a class="logo" href="#">Ramais - Hospital Fundação Ouro Branco</a>
-        <ul class="nav-list">
+<body> <!-- Seção principal -->
+  <header> <!-- Cabeçalho do topo da página -->
+    <nav> <!-- Seção de navegação -->
+      <a class="menu">MENU</a> <!-- Criando um link para MENU -->
+      <div class="mobile-menu">  <!-- Definindo a seção do menu de navegação da página -->
+        <div class="line1"></div> <!-- Criando uma linha na página -->
+        <div class="line2"></div> <!-- Criando uma linha na página -->
+        <div class="line3"></div> <!-- Criando uma linha na página -->      
+        <a class="logo" href="#">Ramais - Hospital Fundação Ouro Branco</a> <!-- Link para carregar a navbar -->
+        <ul class="nav-list"> <!-- Criando a lista de navegação -->
           <li><a href="#" id="AmbulatórioBtn" onclick="showBrandInfo('Ambulatório')">Ambulatório</a></li>
           <li><a href="#" id="Bloco CirúrgicoBtn" onclick="showBrandInfo('Bloco Cirúrgico')">Bloco Cirúrgico</a></li>
           <li><a href="#" id="CentraldeAutorizaçõesBtn" onclick="showBrandInfo('Central de Autorizações')">Central de Autorizações</a></li>
@@ -174,13 +174,13 @@
     <div id="Coordenadores" class="brandInfo">
       <div class="titulo">Coordenadores
         <h2 class="ramais">
-          <p>Laboratório - 6366</p>
           <p>Bloco Cirúrgico - 6159</p>
           <p>Central de Autorização - 6141</p>
           <p>CME - 6335</p>
           <p>Diagnóstico por Imagem - 6175</p>
           <p>Farmácia - 6163</p>
           <p>Faturamento - 6368</p>
+          <p>Laboratório - 6366</p>
           <p>Lavanderia - 6369</p>
           <p>Manutenção - 6390</p>
           <p>Pronto Atendimento 24H - 6305</p>
