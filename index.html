@@ -31,14 +31,21 @@
 <body> <!-- Seção principal -->
   <header> <!-- Cabeçalho do topo da página -->
     <nav> <!-- Seção de navegação -->
-      <!-- <a class="menu">MENU</a> -->
       <div class="mobile-menu">  <!-- Definindo a seção do menu de navegação da página -->
         <div class="line1"></div> <!-- Criando uma linha na página -->
         <div class="line2"></div> <!-- Criando uma linha na página -->
         <div class="line3"></div> <!-- Criando uma linha na página -->      
         <a class="logo" href="#">Ramais - Hospital Fundação Ouro Branco</a> <!-- Link para carregar a navbar -->
         <ul class="nav-list"> <!-- Criando a lista de navegação -->
-          <li><a href="#" id="AmbulatórioBtn" onclick="showBrandInfo('Ambulatório')">Ambulatório</a></li>
+
+          <!-- ATENÇÃO 
+
+          PARA INSERIR UM NOVO SETOR, BASTA SEGUIR O EXEMPLO ABAIXO SUBSTITUINDO AS INFORMAÇÕES DO SETOR DESEJADO: 
+          li><a href="#" id="NomeDoSetorBtn" onclick="showBrandInfo('NomeDoSetor')">NomeDoSetor</a></li>
+          
+              ATENÇÃO -->
+
+          <li><a href="#" id="AmbulatórioBtn" onclick="showBrandInfo('Ambulatório')">Ambulatório</a></li> <!-- Criando lista não ordenada com o título dos ramais a serem clicados no Menu  -->
           <li><a href="#" id="Bloco CirúrgicoBtn" onclick="showBrandInfo('Bloco Cirúrgico')">Bloco Cirúrgico</a></li>
           <li><a href="#" id="CentraldeAutorizaçõesBtn" onclick="showBrandInfo('Central de Autorizações')">Central de Autorizações</a></li>
           <li><a href="#" id="CentraldeAgendamentosBtn" onclick="showBrandInfo('Central de Agendamentos')">Central de Agendamentos</a></li>
@@ -83,9 +90,20 @@
       </div>
     </nav>
 
-    <div id="Ambulatório" class="brandInfo">
-      <div class="titulo">Ambulatório
-        <h2 class="ramais">
+    <!-- ATENÇÃO
+
+      PARA INSERIR UM NOVO RAMAL, BASTA SEGUIR O EXEMPLO ABAIXO SUBSTITUINDO AS INFORMAÇÕES: 
+      <p>B01 - Localização - ramal </p> 
+
+      Gentileza manter a ordem alfabética;
+   
+      ATENÇÃO -->
+
+
+    
+    <div id="Ambulatório" class="brandInfo"> <!-- O "id" é utilizado para vincular esse bloco de informações a um botão de Menu na barra de navegação do site e "brandInfo" define o estilo e propriedade do bloco -->
+      <div class="titulo">Ambulatório <!-- Titulo a ser exibido -->
+        <h2 class="ramais"> <!-- "ramais" é um estilo .css -->
           <p>B01 - Ergométrico / Espirometria - 6252</p>
           <p>B02 - 6302</p>
           <p>B03 - ECG / EEG - 6109</p>
@@ -528,20 +546,22 @@
     </div>
   </header>
 
+<!-- Função para mostrar as informações sobre o setor selecionado  -->
+
   <main>
     <script>
-      function showBrandInfo(brand) {
+      function showBrandInfo(brand) { /* "brand" representa o setor selecionado pelo usuário */
         var i;
-        var brandInfo = document.getElementsByClassName("brandInfo");
-        for (i = 0; i < brandInfo.length; i++) {
+        var brandInfo = document.getElementsByClassName("brandInfo"); /* "brandInfo" recebe a lista de elementos */
+        for (i = 0; i < brandInfo.length; i++) { /* loop para percorrer todos os elementos da lista */
           brandInfo[i].className = brandInfo[i].className.replace(" show", "");
         }
-        document.getElementById(brand).className += " show";
+        document.getElementById(brand).className += " show"; /* aqui a classe show exibe os elementos clicados pelo usuário */
       }
     </script>
   </main>
 
-  <script src="mobile-navbar.js"></script>
+  <script src="mobile-navbar.js"></script> <!-- Carrega o arquivo JS especificado e o executa adicionando um comportamento interativo à barra de navegação -->
 </body>
 
 </html>
