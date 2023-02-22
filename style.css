@@ -42,7 +42,7 @@ button:hover {
   text-align: center;
   position: fixed; /* Define a posição do título como fixa */
   top: 15vh; /* Define a distância do topo da viewport como 15% da altura da viewport */
-  right: -70vh; /* Define a distância da direita da viewport como -70% da altura da viewport */
+  right: 10vh; /* Define a distância da direita da viewport como -70% da altura da viewport */
   left: 5vh; /* Define a distância da esquerda da viewport como 5% da altura da viewport */
   width: 90vw; /* Define a largura do título como 90% da largura da viewport */
   height: 92vh; /* Define a altura do título como 92% da altura da viewport */
@@ -67,8 +67,8 @@ button:hover {
 /* Configurações do logotipo */
 .logo {
   position: relative; /* Define a posição do título como relativa */
-  top: -4vh; /* Define a distância do topo da viewport como -4% da altura da viewport */
-  right: -35vh; /* Define a distância da direita da viewport como -35% da altura da viewport */
+  top: -4.5vh; /* Define a distância do topo da viewport como -4% da altura da viewport */
+  right: -45vh; /* Define a distância da direita da viewport como -35% da altura da viewport */
   font-size: 26px;
   text-transform: uppercase;
   text-align: center;
@@ -109,7 +109,7 @@ main {
 .mobile-menu {
   position: relative;
   top: 2vh;
-  left: -60vh; /* ALTERAR AQUI PARA MUDAR A DISTANCIA DO MENU PRAS 3 BARRAS */
+  left: -30vh; /* ALTERAR AQUI PARA MUDAR A DISTANCIA DO MENU PRAS 3 BARRAS */
   display: block;
   cursor: pointer;
 }
